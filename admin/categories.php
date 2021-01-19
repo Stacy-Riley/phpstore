@@ -34,14 +34,13 @@ include('adminpartials/aside.php');
       <div class="row">
         <div class="col-sm-3">
         </div>
-
         <div class="col-sm-6">
-          <form role="form">
+          <form role="form" action="cathandler.php" method="post">
               <h1>Categories</h1>
               <div class="box-body">
                 <div class="form-group">
                   <label for="category">Categories</label>
-                  <input type="text" class="form-control" id="category" placeholder="Enter category">
+                  <input type="text" class="form-control" id="category" placeholder="Enter category" name="name">
                 </div>
               </div>
               <!-- /.box-body -->

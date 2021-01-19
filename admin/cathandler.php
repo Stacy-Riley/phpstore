@@ -2,14 +2,10 @@
 include("../partials/connect.php");
 
 //Fetching the data from the contact form
-$email=$_POST["email"];
-
-echo $email;
-
-$msg=$_POST["msg"];
+$category=$_POST['name'];
 
 //Sending data to database: below contact form with designated names connected to variables made in this form
-$sql="INSERT INTO contact (email,msg) VALUES('$email','$msg')";
+$sql="INSERT INTO categories(name) VALUES('$category')";
 
 $connect->query($sql);
 
