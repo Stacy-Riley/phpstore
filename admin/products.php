@@ -58,8 +58,8 @@ include('adminpartials/aside.php');
                 <div class="form-group">
                   <label for="category">Category</label>
                   <select id="category" name="category">
-                    <option>Shirts</option>
-                    <option>Pants</option>
+                    <option value="2">Shirts</option>
+                    <option value="1">Pants</option>
                   </select>
                 </div>
               </div>
