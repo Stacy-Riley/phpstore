@@ -2,6 +2,8 @@
 <html>
 
 <?php
+
+include('adminpartials/session.php');
 include('adminpartials/head.php');
 ?>
 
@@ -58,8 +60,14 @@ include('adminpartials/aside.php');
                 <div class="form-group">
                   <label for="category">Category</label>
                   <select id="category" name="category">
-                    <option value="2">Shirts</option>
-                    <option value="1">Pants</option>
+                    <?php
+                    include('../partials/connect.php');
+                    $cat="SELECT * from categories";
+                    $results=mysqli_query($connect,$cat);
+                    while($row=mysqli_fetch_assoc($results)){
+                      echo "<option value=".$row['id'].">".$row['name']."</option>";
+                      }
+                    ?>
                   </select>
                 </div>
               </div>
